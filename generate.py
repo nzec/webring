@@ -25,4 +25,4 @@ html += "</ul></body></html>"
 with open(output_dir / "index.html", "w") as f:
     f.write(html)
 
-print("✅ Generated from ring.csv")
+print("Generated from ring.csv")
