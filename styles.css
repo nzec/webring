@@ -1,34 +1,47 @@
+@font-face {
+    font-family: "Jetbrains Mono";
+    src: url(./JetBrainsMono.ttf);
+}
+
 body {
-    font-family: sans-serif;
+    font-family: "Jetbrains Mono", monospace;
 	line-height: 1.6;
     background-color: #111;
     color: #fff;
-	max-width: 80%;
-	margin: auto;
+    font-weight:lighter;
+    max-width:1250px; 
+    margin: 0 auto
 }
 
 h1 {
 	text-align: center;
 }
 
-h1,h2,h3,h4 {
-	font-family: Courier New, Courier, Consolas, monospace;
-}
-
 a {
-    color: #f3c;
-    text-decoration: none;
+    color: #58d3d7;
+    text-decoration: underline;
     background-color: transparent;
+    font-weight: normal;
 }
 
 a:hover, a:focus {
     text-decoration: none; 
-    background-color: #f3c;
-    color: #fff; 
+    background-color: #58d3d7;
+    color: #111; 
+}
+
+b {
+    color:#58d3d7;
+    font-weight: bold;
+}
+
+#members {
+    width:100%;
+    overflow-x:auto
 }
 
 table {	
-    width: 90%;
+    width: 100%;
     border-collapse: collapse;
     margin: 12px auto;
 	font-size: 1em;
@@ -49,17 +62,37 @@ tr:hover {
 th, td {
     padding: 10px;
     border: 2px solid #666;
+    border-radius: 8px;
 	text-align: left; 
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
 }
 
 th {
     background-color: #444;
     text-align: center;
 	font-size: 1.1em;
-	font-family: Courier New, Courier, Consolas, monospace;
+}
+
+ol {
+    margin:0 1.75em;
+    padding:0;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+pre {
+    font-family: 'jetbrains mono', monospace;
+    white-space: nowrap;
+    overflow-x: auto;
+    border: 1px solid #666;
+    border-radius: 8px;
+    padding: 1em;
+}
+
+.comment {
+    color:#929292;
+    font-style:italic
 }
 
 .container {
@@ -68,69 +101,17 @@ th {
     padding: 12px;
 }
 
+footer {
+    text-align: center;
+    font-size:0.75em;
+}
+
 @media screen and (max-width: 600px) {
+    table {
+        width: 100%; /* Allows the table to be 100% width on smaller screens */
+    }
     body {
-        font-size: 90%; 
+        padding:0.5em
     }
-
-    table { 
-		width: 100%;
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-
-    th, td {
-        display: block;
-        text-align: left;
-		white-space: normal;
-    }
-	
-    tr {
-        display: flex; 
-        flex-direction: column; 
-    }
-
-}
-:root {
-  --card-border: #446868;
-  --card-link-color: #88bebe;
-}
-.cards-container {
-		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-}
-.cards-container a {
-		color: var(--card-link-color);
-}
-.cards {
-		display: grid;
-		grid-gap: 0.5rem;
-		grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-}
-.card {
-		border: 2px solid var(--card-border);
-		border-radius: 0.5rem;
-}
-.card-name {
-		background-color: var(--card-border);
-		font-size: 1.25rem;
-		padding: 0.25rem; 
-		border-radius: 0.25rem 0.25rem 0 0;
-		text-transform: lowercase;
-}
-.card-content {
-		padding: 0.5rem;
-}
-.card-link {
-		font-size: .95rem;
-		text-transform: lowercase;
-}
-.card-text {
-		font-size: 0.75rem;
-}
-.card-slug {
-		font-size: 0.75rem;
 }
 
